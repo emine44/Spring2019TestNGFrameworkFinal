@@ -74,6 +74,8 @@ public class TestBase {
     @AfterMethod(alwaysRun = true)
     @Parameters("browser")
     public void teardown(@Optional String browser, ITestResult result) {
+
+
         // checking if the test method failed
         if (result.getStatus() == ITestResult.FAILURE) {
             // get screenshot using the utility method and save the location of the screenshot

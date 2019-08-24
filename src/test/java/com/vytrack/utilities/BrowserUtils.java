@@ -456,8 +456,8 @@ public class BrowserUtils {
      */
     public static String getScreenshot(String name) {
         // name the screenshot with the current date time to avoid duplicate name
-        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_hh:mm:ss a"));
-
+       // String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_hh:mm:ss a"));
+        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MMdd_hh_mm_ss_a"));
         // TakesScreenshot ---> interface from selenium which takes screenshots
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);
